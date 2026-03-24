@@ -21,7 +21,7 @@ main([Host, PortStr]) ->
 
     run_test("ECDSA-only client", Host, Port, CACertDER,
              [{signature_algs, [ecdsa_secp256r1_sha256]},
-              {signature_algs_cert, RsaCertSchemes ++ [ecdsa_secp256r1_sha256]}]);
+              {signature_algs_cert, RsaCertSchemes}]);
 
 main(_) ->
     io:format("Usage: escript ssl_test_client.escript <host> <port>~n"),
